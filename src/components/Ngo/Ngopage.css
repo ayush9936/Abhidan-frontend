@@ -1,0 +1,43 @@
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ngo-card {
+  display: flex;
+  
+  align-items: center;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ngo-image {
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+.ngo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.ngo-details {
+  
+}
+
+.ngo-details h2 {
+  margin-top: 0;
+}
+
+.ngo-details p {
+  margin-bottom: 10px;
+}
+

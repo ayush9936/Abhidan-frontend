@@ -1,0 +1,97 @@
+/** @format */
+
+.how-it-works {
+
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: 100%;
+  
+}
+
+.subcontainer {
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.subcontainer-title_heading {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  
+}
+
+
+
+.subcontainer-donor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+.subcontainer-ngo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+
+.subcontainer-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+font-size:18px;
+font-weight: 700;
+  font-family: Barlow,sans-serif;
+  color:black;
+}
+
+.subcontainer-buttons .switch{
+  border-radius: 8px;
+  padding: 12px 18px;
+  border:2px solid orange;
+ 
+}
+.subcontainer-buttons .switch-1{
+  border-radius: 8px;
+  padding:12px  18px;
+  border:2px solid orange;
+}
+
+
+.subcontainer-card {
+  height: 22rem;
+ border:2px solid orange;
+  border-radius: 15px;
+  max-width: 20rem;
+  min-width: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+
+
+
+.subcontainer-card-header {
+  font-size: 1.3rem;
+}
+
+
+.subcontainer-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+   

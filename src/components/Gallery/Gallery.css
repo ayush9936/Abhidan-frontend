@@ -1,0 +1,36 @@
+.container .GalleryHeading{
+    box-sizing: border-box;
+    background-color: #C5E34C;
+    margin-top: 0;
+    border-radius: 10px;
+}
+.container .GalleryHeading .title{
+    text-align: center;
+}
+.container .GalleryHeading h1{
+    font-size: 50px;
+    padding: 10px;
+    color: rgb(3, 34, 61);
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.container .imageContainer{
+    columns: 4 250px;
+    gap: 10px;
+    border-radius: 5px;
+    
+}
+
+.container .imageContainer img{
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(97, 134, 168, 0.703);
+}
+
+.container .imageContainer img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 6px 7px rgba(160, 182, 223, 0.778);
+}

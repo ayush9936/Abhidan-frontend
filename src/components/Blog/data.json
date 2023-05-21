@@ -1,0 +1,185 @@
+{
+   "data":{
+      "Tragedy":[
+         {
+            "id":"WD101",
+            "title":"2023 Turkey-Syria Earthquake",
+            "description":"On Feb. 6, a magnitude 7.8 earthquake occurred in southern Turkey near the northern border of Syria. This quake was followed approximately nine hours later by a magnitude 7.5 earthquake located around 59 miles (95 kilometers) to the southwest.",
+            "image":{
+               "url":"https://disasterphilanthropy.org/wp-content/uploads/2023/02/Turkey-earthquake-@tcsavunma-7.jpeg",
+               "alt":"Earthquake"
+            }
+         },
+         {
+            "id":"DS201",
+            "title":"Here is what happened in Kedarnath flood disaster, 2013",
+            "description":"According to figures provided by the Government of Uttarakhand, more than 5,700 people were 'presumed dead.' This total included 934 local residents. The death toll was later placed at 6,054. Most of the dead were pilgrims.",
+            "image":{
+               "url":"https://images.indianexpress.com/2013/06/b_id_394380_flood-damage.jpg",
+               "alt":"Kedarnath"
+            }
+         },
+         {
+            "id":"ST301",
+            "title":"Three NGOs You Can Contact To Offer Your Support",
+            "description":"This course covers the basics of software testing, including test planning, test case design, test execution, and defect management. Students will learn how to use popular testing frameworks and tools to ensure the quality and reliability of software applications.",
+            "image":{
+               "url":"https://pbs.twimg.com/media/FCJcXaGVUAEIpIG?format=jpg&name=900x900",
+               "alt":"Three NGOs You Can Contact To Offer Your Support"
+            }
+         },
+         {
+            "id":"MD401",
+            "title":"NGOs step up to help Uttarakhand victims",
+            "description":"To provide relief to thousands of people affected by the disaster in Uttarakhand, several city-based NGOs and individuals are coming forward to help those who are still stuck there.City-based NGO Shiv Parvati Sewa Dal is sending relief in the form of food and water.",
+            "image":{
+               "url":"https://images.news18.com/ibnlive/uploads/2013/07/now-relief-materials-and-funds-for-uttarakhand-flood-victims-dwindling_220713092037.jpg?impolicy=website&width=510&height=356",
+               "alt":"Uttarakhand victims"
+            }
+         },
+         {
+            "id":"DO501",
+            "title":"Outbreak Trends of Coronavirus Disease-2019 in India",
+            "description":"he objective of this paper is to prepare the government and citizens of India to take or implement the control measures proactively to reduce the impact of coronavirus disease 2019 (COVID-19).",
+            "image":{
+               "url":"https://assets.weforum.org/article/image/Gt3_maI3Pg1p3LCdz686W_z41IEvOy6elJNQmu_oRLc.jpg",
+               "alt":"Covid 2020"
+            }
+         }
+      ],
+      "Medical":[
+         {
+            "id":"MK101",
+            "title":"Making Healthcare System in India a Major Agenda for G20 2023",
+            "description":"India; a looted, invaded and colonised nation. From being misconstrued as a land of snake charmers, mystics and beggars to being acknowledged as an ancient, flourishing ",
+            "image":{
+               "url":"https://www.smilefoundationindia.org/blog/wp-content/uploads/2022/11/IMG_5929-1024x683-1-768x512.jpg",
+               "alt":"Medical"
+            }
+         },
+         {
+            "id":"LD201",
+            "title":"India is known to be the world’s oldest and largest democracy, but what is not known is that our Constitution has given all Indians the right to uniform health care as one of their civil and constitutional rights",
+            "description":"India is known to be the world’s oldest and largest democracy, but what is not known is that our Constitution has given all Indians the right to uniform health care as one of their civil and constitutional rights ",
+            "image":{
+               "url":"https://www.smilefoundationindia.org/blog/wp-content/uploads/2022/11/JIT_3190-2048x1341-1-768x503.jpg",
+               "alt":"Medical"
+            }
+         },
+         {
+            "id":"FN301",
+            "title":"WHAT IS OMICRON & SHOULD WE BE WORRIED?",
+            "description":"The COVID virus has affected how the world works, introducing new requirements, guidelines, and precautions to heed. While the pandemic has seen many variants and mutations, the latest in this list is the Omicron variant. But what is this Omicron variant? And how does it differ from the other ones?",
+            "image":{
+               "url":"https://www.narayanahealth.org/blog/wp-content/uploads/2021/12/shutterstock_2085376552.jpg",
+               "alt":"Medical"
+            }
+         },
+         {
+            "id":"OM401",
+            "title":"RECOVERING FROM COVID? HERE’S WHAT YOU NEED TO KNOW",
+            "description":"The lives of everyone worldwide has changed drastically due to the pandemic, and this rings even truer for those who had been diagnosed with it and are now recovering. And there is a set of guidelines that need to be followed to ensure complete and proper recovery.",
+            "image":{
+               "url":"https://www.hindustantimes.com/ht-img/img/2023/04/12/550x309/Anyone-can-inform-about-any-Covid-positive-patient_1681310161776.jpg",
+               "alt":"Medical"
+            }
+         }
+      ],
+      "Education":[
+         {
+            "id":"GD101",
+            "title":"5 Eminent Ways for Upgrading the Rural Education System in India",
+            "description":"Rural education might be disadvantaged because of the geographical locations and dearth of resources, but taking up initiatives to solve the issue will eliminate a great part of illiteracy. ",
+            "image":{
+               "url":"https://www.abcindia.org/uploadedfiles/blog/large/1595914166.jpg",
+               "alt":"education"
+            }
+         },
+         {
+            "id":"UX201",
+            "title":"5 Education Trends 2023 to Change Education in India",
+            "description":"As a student, you might remember sitting in a classroom listening to teachers giving lectures about different subjects, and taking notes with a pen and paper. If we had a question,",
+            "image":{
+               "url":"https://www.smilefoundationindia.org/blog/wp-content/uploads/2023/03/334503384_585234316821021_2107217766923503754_n-e1677852411460-768x886.jpg",
+               "alt":"education"
+            }
+         },
+         {
+            "id":"ID301",
+            "title":"Foundational Stage Learning Opportunity in India",
+            "description":"The play-based teaching learning material emphasises the development of children in five domains: physical, socio-emotional and ethical, cognitive, language, and literacy, and lastly aesthetic and cultural developments.",
+            "image":{
+               "url":"https://www.smilefoundationindia.org/blog/wp-content/uploads/2022/11/XB5A4749-west-bengal-1-1024x683-1-768x512.jpg",
+               "alt":"education"
+            }
+         },
+         {
+            "id":"FD401",
+            "title":"What Happens When Girls are Stopped from Going to Schools?",
+            "description":"It’s always a good idea to circle back to the basics when feeling disillusioned with what we’re doing in our lives. One wrong action has the power to create ripple effects somewhere else",
+            "image":{
+               "url":"https://www.smilefoundationindia.org/blog/wp-content/uploads/2022/11/Andharsuli-Burdwan-55-1024x683-1-768x512.jpg",
+               "alt":"education"
+            }
+         }
+      ],
+      "Animals":[
+         {
+            "id":"An101",
+            "title":"YOU MADE IT HAPPEN: AMBULANCES & MEDICINES SAVED THE LIVES OF COUNTLESS STRAYS",
+            "description":"Donations have the power to transform lives, and it’s people like you who are the lifeline of NGOs. Which is why we have some great news for you! Here are a few heartwarming updates on some of the campaigns that you’ve supported unconditionally.",
+            "image":{
+               "url":"https://donatekart.com/blog/wp-content/uploads/2023/04/Screenshot-2023-01-10-at-2.17.40-PM-800x400.png",
+               "alt":"Animal"
+            }
+         },
+         {
+            "id":"An986",
+            "title":"MAKE THIS HOLI SPECIAL FOR OUR FURRY FRIENDS BY KEEPING THEM SAFE",
+            "description":"Holi marks the arrival of spring in India and is celebrated with great merriment and joy. Indian cities and countryside are filled with the blooming Flame of the forest or dhak flowers. Happiness and love set the tone of the festival. Yet this festival can pose a danger to stray animals if they come into contact with the colors or are hit by water balloons or pelted with other objects.",
+            "image":{
+               "url":"https://www.shutterstock.com/image-photo/holi-dog-260nw-613474919.jpg",
+               "alt":"Animal"
+            }
+         },
+         {
+            "id":"LT301",
+            "title":"SELF-SUSTAINABILITY IS THE WAY FORWARD FOR INDIA’S GAUSHALAS TO GIVE INNOCENT COWS A BETTER LIFE",
+            "description":"“It is very common for cattle in India to be abandoned once they stop producing milk. These poor animals end up roaming the streets and either they meet with terrible accidents on the highways or eat huge amounts of plastic and suffer from terrible illnesses,” – Kapil Anand, Co-Founder, Gau Nandi Sewa",
+            "image":{
+               "url":"https://thumbs.dreamstime.com/b/special-cow-thailand-cattle-caused-crash-interbreeding-74997440.jpg",
+               "alt":"Animal"
+            }
+         }
+      ],
+      "Disability":[
+         {
+            "id":"MT101",
+            "title":"Inclusion of the Specially Abled in Mainstream Society",
+            "description":"People are made up of habits and society is made up of notions. The human race has come a long way since the ancient times and has undergone",
+            "image":{
+               "url":"https://images.pexels.com/photos/2026764/pexels-photo-2026764.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+               "alt":"disability"
+            }
+         },
+         {
+            "id":"LF201",
+            "title":"Sminu Jindal tells world’s business leaders in Washington summit ",
+            "description":"NEW DELHI, April 26, 2022: Jindal SAW Ltd Managing Director Sminu Jindal addressed thousands of entrepreneurs from all over the world at the Global Leadership Conference (GLC), the flagship by-invitation-only event of the Entrepreneurs’ Organization (EO) on 25 April in Washington, DC. She was the only Indian leader among the select 16 mainstage speakers at the event.",
+            "image":{
+               "url":"https://svayam.files.wordpress.com/2022/04/img-20220426-wa0010.jpg",
+               "alt":"Event"
+            }
+         },
+         {
+            "id":"LT301",
+            "title":"Non-Governmental Sectors Have A Greater Role Towards Children With Disabilities",
+            "description":"The NGO sectors in India are bestowed with the responsibility towards ensuring education for children with disabilities. The District Primary Education Program has been incorporated into the Sarva Siksha Abhiyan and focuses on children with disabilities, which the NGO executives have to follow while operating. ",
+            "image":{
+               "url":"https://www.abcindia.org/uploadedfiles/blog/large/1618557067.png",
+               "alt":"Travel Photography"
+            }
+         }
+      ]
+   }
+}

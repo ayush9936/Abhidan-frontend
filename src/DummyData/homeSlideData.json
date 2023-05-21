@@ -1,0 +1,21 @@
+ 
+ [
+    {
+        "id": 1,
+        "img": "https://images.unsplash.com/photo-1609139003551-ee40f5f73ec0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+         "heading":"Give them a helping hand",
+         "desc":" Join your hands with us to provide one time delicious meal."
+    },
+    {
+        "id": 2,
+        "img": "https://media.istockphoto.com/id/1175983917/photo/closeup-of-a-poor-staring-hungry-orphan-boy-in-a-refugee-camp-with-sad-expression-on-his-face.jpg?s=612x612&w=0&k=20&c=U81vSc7m0oo51TtRbSGqaIbmLAL6sMaMKMrsm0mDtCI=",
+         "heading":"helping each other can make better world ",
+         "desc":"The Charnyy Global aid network envisions a thriving and  connected community."
+    },
+    {
+        "id": 3,
+        "img":"https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+         "heading":"THEY ARE WAIT FOR YOUR HELP",
+         "desc":"Some representative placeholder content for the third slide."
+    }
+]

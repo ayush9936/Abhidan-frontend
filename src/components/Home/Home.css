@@ -1,0 +1,157 @@
+/* image slider css at home page  */
+.slider-item {
+  position: relative;
+}
+
+
+.sliderContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding: 20px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.132);
+  width:auto;
+
+  
+}
+
+.sliderContent h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .sliderContent h3 {
+    font-size: 18px;
+  }
+  
+}
+/* end  */
+
+
+
+
+/* circle----------- css */
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: "#DDFFBC" ;
+}
+.rowCircle .social-head{
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+  
+}
+
+.rowCircle .col-lg-4:nth-child(1){
+  animation:  bounce 3s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+.rowCircle .col-lg-4:nth-child(2){
+  animation:  bounce 5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+.rowCircle .col-lg-4:nth-child(3){
+  animation:  bounce 7s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 50px, 0);
+  }
+}
+
+
+
+
+ 
+.Circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.Circle .inner-circle{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #efefef;
+  background-color:"#91C788";
+    text-align: center;
+  
+  
+}
+.Circle .inner-circle h2{
+  font-size:20px;
+  font-weight: 500;
+}
+
+.Circle .inner-circle p{
+  padding:  25px;
+  font-size: 16px;
+}
+.rowCircle .nextrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:-114px
+}
+
+@media only screen and (max-width:768px){
+  
+  .Circle .inner-circle{
+    width:250px;
+    height:250px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin:2px;
+  }
+  .Circle .inner-circle h2{
+font-size: 18px;
+  }
+  .Circle .inner-circle p{
+
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width:1000px){
+  
+  .Circle .inner-circle{
+    margin: 2px;
+  }
+  .rowCircle .nextrow{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* end--- */
+

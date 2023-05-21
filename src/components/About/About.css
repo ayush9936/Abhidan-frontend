@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100&family=Roboto:wght@100;300;400;500;700;900&family=Work+Sans:wght@300&display=swap');
+
+.section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color:white;
+  overflow-x: hidden;
+ 
+}
+.section .aboutContainer {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.section .aboutContainer .row1 {
+  box-sizing: border-box;
+}
+
+.section .aboutContainer .row1 .colum1 {
+  box-sizing: border-box;
+}
+
+.section .aboutContainer .row1 .colum1 .heading ul{
+  color: #666666;
+  font:15px ;
+  font-family: 'poppins', sans-serif;
+}
+
+.section .aboutContainer .row1 .colum2 {
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  /* box-shadow: 10px 10px; */
+  border-radius: 10px;
+}
+
+/* About Slick ka css hai */
+
+
+.section-2 {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* background-color: #efefef; */
+  margin-bottom: 1em;
+  max-width: 100%;
+
+
+}
+
+.headingPart {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  
+  
+}
+
+.slideHeading {
+  font-size: larger;
+  font-weight: 1200;
+  font-style: italic;
+  display: block;
+  /* margin: 0.5em; */
+  font-size: 50px;
+  color: rgb(3, 34, 61);
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+  /* background: rgb(176, 213, 224); */
+  width: 50%;
+  /* box-shadow: 0 6px 7px rgba(160, 182, 223, 0.778); */
+  border-radius: 5px;
+  /* margin-left: 25%; */
+  
+}
+
+.SlideBackground {
+  /* background-image: url('https: //static.toiimg.com/photo/85301692/85301692.jpg?v=3'); */
+  background-size: cover;
+  /* background: red; */
+}
+
+.slideSection {
+  padding: 0 25px;
+  margin-bottom: 1em;
+  margin: 10px;
+}
+
+.slideSection:hover {
+  transform: scale(1);
+}
+
+.main-card {
+  border-radius: 25px;
+  background-color: #fff;
+  margin: 0 10%;
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50%;
+  width: 100%;
+  background-color: #258ea6;
+  border-radius: 25px 25px 0 0;
+}
+
+/* .overlay::before,
+.overlay::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+
+  background-color: #258ea6;
+} */
+
+/* .overlay::after {
+  border-radius: 0 55px 0 0;
+  background-color: #fff;
+} */
+
+.card-image {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+}
+
+
+
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  /* border: 4px solid #ecf0f1; */
+  background-color: #258ea6;
+}
+
+.slick-prev {
+  content: none;
+}
+
+/* aboutSlick.jsx end */
+
+@media screen and (max-width: 990px) {
+  .aboutContainer {
+   display: block;
+    margin: auto;
+  }
+
+  .slideHeading{
+    /* margin-left: 1em; */
+  }
+
+}

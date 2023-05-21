@@ -1,0 +1,28 @@
+
+[
+    {
+        "id": 1,
+        "name": "Alex",
+        "img": "./images/reviewAuth6.png",
+        "desc": "Description 1"
+    },
+    {
+        "id": 2,
+        "name": "Ayush Dubey",
+        "img": "https://w0.peakpx.com/wallpaper/179/485/HD-wallpaper-hanuman-bajrang-bali-jai-hanuman.jpg",
+        "desc": "Description 2"
+    },
+    {
+        "id": 3,
+        "name": "Ashish Soni",
+        "img": "https://www.hinduwallpaper.com/uploads/21052021015004aer3.jpg",
+        "desc": "Description 3"
+    },
+    {
+        "id": 4,
+        "name": "Aman Gupta",
+        "img": "https://static.toiimg.com/photo/85301692/85301692.jpg?v=3",
+        "desc": "Description 4"
+    }
+]
+
