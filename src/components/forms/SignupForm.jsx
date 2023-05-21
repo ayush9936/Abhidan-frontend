@@ -1,76 +1,66 @@
-import React, { useState } from 'react'
-import { toast } from 'react-hot-toast'
-import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
-import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
-
-
+import React, { useState } from "react";
+import { toast } from "react-hot-toast";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import app_config from "../../config";
 
 const SignupForm = () => {
-
- 
+  const url = app_config.api_url;
 
   const navigate = useNavigate();
   let initialValue = {
     username: "",
     email: "",
     password: "",
-    salt_password:"",
+    salt_password: "",
     phonenumber: "",
-    user_type:"donor",
+    user_type: "donor",
   };
   const [formData, setFormData] = useState(initialValue);
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
- 
-
   function handleChange(e) {
     console.log(formData);
-   const { name, value } = e.target;
-   setFormData({ ...formData, [name]: value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   }
-  console.log("form data",formData);
-
-
+  console.log("form data", formData);
 
   async function handleSubmit(event) {
     event.preventDefault();
     console.log("formdata", formData);
 
- 
+    axios
+      .post(url + "/register-user", formData)
+      .then((res) => {
+        console.log(res.data);
 
-       axios
-         .post("http://localhost:1300/api/register-user", formData)
-         .then((res) => {
-           console.log(res.data);
+        //  window.localStorage.setItem("token", res.data);
 
-          //  window.localStorage.setItem("token", res.data);
+        setTimeout(() => {
+          toast.success("Sign Up successfully");
+          navigate("/login");
+        }, 1000);
+        setFormData(" ");
+      })
+      .catch((error) => {
+        console.log(error.response.status);
+        if (error.response.status === 422) {
+          toast.error("User is already present");
+        }
 
-           setTimeout(() => {
-             toast.success("Sign Up successfully");
-             navigate("/login");
-           }, 1000);
-           setFormData(" ");
-         })
-         .catch((error) => {
-           console.log(error.response.status);
-           if (error.response.status === 422) {
-             toast.error("User is already present");
-           };
-
-           if (error.response.status === 400) {
-             toast.error("Please fill all fields!")
-           }
-           if (error.response.status === 500) {
-             toast.error("Something Wrong!");
-             console.log(error);
-           } 
-         });
-      
-    
-   };
+        if (error.response.status === 400) {
+          toast.error("Please fill all fields!");
+        }
+        if (error.response.status === 500) {
+          toast.error("Something Wrong!");
+          console.log(error);
+        }
+      });
+  }
 
   return (
     <div>
@@ -201,4 +191,4 @@ const SignupForm = () => {
   );
 };
 
-export default SignupForm
+export default SignupForm;

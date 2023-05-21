@@ -5,10 +5,10 @@ import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import FormValidation from "./FormValidation";
 import ForgotPassword from "./ForgotPassword";
-// import app_config from '../Config';
+import app_config from "../Config";
 
 const LoginForm = ({ setIsLoggedIn }) => {
-  // const url = app_config.api_url;
+  const url = app_config.api_url;
   const navigate = useNavigate();
   let initialValue = {
     email: "",
@@ -32,7 +32,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
     console.log("errors", errors);
 
     axios
-      .post("http://localhost:1300/api/donor-login", formData)
+      .post(url + "/donor-login", formData)
       .then((data) => {
         console.log("userRegister", data);
         window.localStorage.setItem("token", JSON.stringify(data.data.data));
@@ -70,7 +70,10 @@ const LoginForm = ({ setIsLoggedIn }) => {
   }
   return (
     <div>
-      <form onSubmit={handlerSubmit} className="flex flex-col gap-y-3 mt-1 px-3 py-2">
+      <form
+        onSubmit={handlerSubmit}
+        className="flex flex-col gap-y-3 mt-1 px-3 py-2"
+      >
         <label htmlFor="email" className="w-full">
           <p className="text-lg text-[#292929] mb-1 leading-[1.375rem]">
             Email Address:<sup className="text-pink-200">*</sup>

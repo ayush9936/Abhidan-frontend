@@ -1,13 +1,15 @@
-import axios from 'axios';
-import React, { useState } from 'react'
-import { toast } from 'react-hot-toast';
-import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
-import { Link, useNavigate } from 'react-router-dom';
-import ForgotPassword from './ForgotPassword';
-import FormValidation from './FormValidation';
-
+import axios from "axios";
+import React, { useState } from "react";
+import { toast } from "react-hot-toast";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { Link, useNavigate } from "react-router-dom";
+import ForgotPassword from "./ForgotPassword";
+import FormValidation from "./FormValidation";
+import app_config from "../../config";
 
 const NgoLoginForm = ({ setIsNgoLoggedIn }) => {
+  const url = app_config.api_url;
+
   const navigate = useNavigate();
   let initialValue = {
     register_id: "",
@@ -17,7 +19,7 @@ const NgoLoginForm = ({ setIsNgoLoggedIn }) => {
 
   const [showPassword, setShowPassword] = useState(false);
   const [forgotModel, setForgotModel] = useState(false);
-   const [errors, setErrors] = useState(false);
+  const [errors, setErrors] = useState(false);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -30,7 +32,7 @@ const NgoLoginForm = ({ setIsNgoLoggedIn }) => {
     setErrors(FormValidation(formData));
 
     axios
-      .post("http://localhost:1300/api/ngo-login", formData)
+      .post(url + "/ngo-login", formData)
       .then((res) => {
         console.log(res.data);
         localStorage.setItem("token", res.data);
@@ -143,4 +145,4 @@ const NgoLoginForm = ({ setIsNgoLoggedIn }) => {
   );
 };
 
-export default NgoLoginForm
+export default NgoLoginForm;

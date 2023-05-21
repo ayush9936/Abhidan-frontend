@@ -3,8 +3,11 @@ import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
+import app_config from "../../config";
 
 const NgoRegistation = (props) => {
+  const url = app_config.api_url;
+
   let setIsLoggedIn = props.setIsLoggedIn;
   let accountType = props.accountType;
   const navigate = useNavigate();
@@ -48,7 +51,7 @@ const NgoRegistation = (props) => {
     }
 
     axios
-      .post("http://localhost:1300/api/register-ngo", formData)
+      .post(url + "/register-ngo", formData)
       .then((res) => {
         console.log(res.data);
         setTimeout(() => {
@@ -58,7 +61,7 @@ const NgoRegistation = (props) => {
         setFormData(" ");
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error);
         // if (error.response.status === 400) {
         //   toast.error("Please fill all field");
         // }
