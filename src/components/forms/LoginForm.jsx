@@ -8,7 +8,7 @@ import ForgotPassword from "./ForgotPassword";
 import app_config from "../Config";
 
 const LoginForm = ({ setIsLoggedIn }) => {
-  const url = app_config.api_url;
+  const url = app_config.back_url;
   const navigate = useNavigate();
   let initialValue = {
     email: "",

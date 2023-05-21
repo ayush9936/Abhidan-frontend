@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import app_config from "../../config";
 
 const NgoRegistation = (props) => {
-  const url = app_config.api_url;
+  const url = app_config.back_url;
 
   let setIsLoggedIn = props.setIsLoggedIn;
   let accountType = props.accountType;

@@ -6,7 +6,7 @@ import axios from "axios";
 import app_config from "../../config";
 
 const SignupForm = () => {
-  const url = app_config.api_url;
+  const url = app_config.back_url;
 
   const navigate = useNavigate();
   let initialValue = {
