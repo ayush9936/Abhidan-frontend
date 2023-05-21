@@ -5,7 +5,7 @@ import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import FormValidation from "./FormValidation";
 import ForgotPassword from "./ForgotPassword";
-import app_config from "../Config";
+import app_config from "../../config";
 
 const LoginForm = ({ setIsLoggedIn }) => {
   const url = app_config.back_url;
