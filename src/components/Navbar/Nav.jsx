@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import { toast } from "react-hot-toast";
-import logo from "./nav_logo.png";
+import logo from "./navlogo.png";
 
 const UserDropDown = ({ isLoggedIn, setIsLoggedIn }) => {
   let [dropOpen, setDropOpen] = useState(false);
@@ -104,9 +104,9 @@ const Nav = ({ isLoggedIn, setIsLoggedIn }) => {
     <div className=" font-[Poppins] bg-white   h-[70px] z-10 sticky top-0 shadow-2xl ">
       <div className="shadow-md w-full sticky top-0 left-0">
         <div className="md:flex h-[70px] shrink-md items-center justify-between py-4 md:px-10 px-7">
-          <div className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins]  text-gray-800">
-            <span className="fixed mt-1">
-              <img src={logo} className="w-36" alt="abhidan" />
+          <div className="font-bold text-2xl cursor-pointer flex  items-center font-[Poppins]  text-gray-800">
+            <span className="fixed mt-1 px-2 py-2">
+              <img src={logo} className=" w-[62px] mt-2 md:w-[82px]" alt="abhidan" />
             </span>
           </div>
 

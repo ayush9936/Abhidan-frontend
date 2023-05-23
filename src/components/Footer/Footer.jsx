@@ -9,37 +9,51 @@ const Footer = () => {
         <div className="p-10 bg-gray-800 text-gray-200 rounded-md shadow-2xl border-t-2 border-gray-950">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row">
-
               {/* col-1 */}
               <div className="flex flex-col basis-1/4  ">
-
-               <div className='w-full flex ' >
-               <img className='w-[160px]' src={footer} alt="footer_logo"/>
-               </div>
-               <p className="text-orange-400">BBDU Faizabad road, Lucknow </p>
-                <p className="text-orange-400">
+                <div className="w-full flex ">
+                  <img
+                    className="w-[120px] md:w-[160px]"
+                    src={footer}
+                    alt="footer_logo"
+                  />
+                </div>
+                <p className="text-orange-400 text-sm md:text-lg">
+                  BBDU Faizabad road, Lucknow{" "}
+                </p>
+                <p className="text-orange-400 text-sm md:text-lg ">
                   <strong>Phone:</strong>+91 8888 8888 88
                 </p>
-                <p className="text-orange-400">
+                <p className="text-orange-400 text-xs md:text-lg">
                   <strong>Email:</strong>abhidan@gmail.com
                 </p>
               </div>
 
               {/* col-2 */}
-              <div className="mb-5 basis-1/4">
+              <div className="mb-5 pt-2 md:pt-0 basis-1/4">
                 <h3 className="pb-3 leading-5 tracking-[0.1rem] font-semibold">
                   Useful Links
                 </h3>
                 <ul className="text-gray-500 pl-2">
                   <li className="pb-2 text-orange-400">Home</li>
-                  <li className="pb-2 text-orange-400 hover:text-yellow-600">About us</li>
-                  <li className="pb-2 text-orange-400 hover:text-yellow-600">Ngo's</li>
-                  <li className="pb-2 text-orange-400 hover:text-yellow-600">Blog</li>
-                  <li className="pb-2 text-orange-400 hover:text-yellow-600">Gallery</li>
+                  <li className="pb-2 text-orange-400 hover:text-yellow-600">
+                    About us
+                  </li>
+                  <li className="pb-2 text-orange-400 hover:text-yellow-600">
+                    Ngo's
+                  </li>
+                  <li className="pb-2 text-orange-400 hover:text-yellow-600">
+                    Blog
+                  </li>
+                  <li className="pb-2 text-orange-400 hover:text-yellow-600">
+                    Gallery
+                  </li>
                   <li className="pb-2 text-orange-400 hover:text-yellow-600">
                     Term of Services
                   </li>
-                  <li className="pb-2 text-orange-400 hover:text-yellow-600">Privacy Policy</li>
+                  <li className="pb-2 text-orange-400 hover:text-yellow-600">
+                    Privacy Policy
+                  </li>
                 </ul>
               </div>
 
@@ -49,7 +63,9 @@ const Footer = () => {
                   Our Services
                 </h3>
                 <ul className="text-gray-500 pl-2">
-                  <li className="pb-2 text-orange-400 hover:text-yellow-600">Food Donation</li>
+                  <li className="pb-2 text-orange-400 hover:text-yellow-600">
+                    Food Donation
+                  </li>
                   <li className="pb-2 text-orange-400 hover:text-yellow-600">
                     Ngo Description
                   </li>
@@ -73,24 +89,22 @@ const Footer = () => {
                 <p className="text-orange-400 pb-2">
                   Join 25,000+ others and never miss donation and more..
                 </p>
-                <form>
-                  <label className="flex flex-row w-full box-border  rounded-lg bg-gray-800 focus:border-yellow-500">
+                <form className='mt-2 md:mt-0 box-border'>
+                  <label className="flex flex-col md:flex-row w-full box-border  rounded-lg bg-gray-800 focus:border-yellow-500">
                     <input
                       type="email"
                       placeholder="info@example.com"
-                      className="appearance-none outline-none pl-2  text-gray-500  bg-gray-200 focus:border-2 focus:border-yellow-500 rounded-tl-lg rounded-bl-lg"
+                      className="appearance-none outline-none pl-2  text-gray-500  bg-gray-200 focus:border-2 focus:border-yellow-500 rounded-md "
                     />
                     <button
                       type="submit"
-                      className="p-2 w-1/3 bg-yellow-500 text-white hover:bg-yellow-600 rounded-tr-lg rounded-br-lg"
+                      className="p-2 w-fit sm:mt-1 md:mt-0  bg-yellow-500 text-white hover:bg-yellow-600 rounded-md "
                     >
                       Suscribe
                     </button>
                   </label>
                 </form>
-                <div>
-                  {/* <Link><img src={Facebook} alt="" /></Link> */}
-                </div>
+                <div>{/* <Link><img src={Facebook} alt="" /></Link> */}</div>
               </div>
             </div>
           </div>

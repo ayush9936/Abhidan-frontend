@@ -34,8 +34,8 @@ const LoginForm = ({ setIsLoggedIn }) => {
     axios
       .post(url + "/donor-login", formData)
       .then((data) => {
-        console.log("userRegister", data);
-        window.localStorage.setItem("token", JSON.stringify(data.data.data));
+        console.log("UserData", data);
+        window.localStorage.setItem("token", JSON.stringify(data.data));
 
         // console.log(res.data);
         // localStorage.setItem("token", JSON.stringify(res.data.data));

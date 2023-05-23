@@ -1,11 +1,7 @@
 import React from "react";
 import frameImage from "./LoginImage-removebg-preview.png";
-import LoginForm from "../components/forms/LoginForm"
-import {FcGoogle} from "react-icons/fc";
-import RegSelection from "./RegSelection"
-import { Link } from "react-router-dom";
 import LogInSelection from "./LogInSelection";
-import AbhidanLogo from "./AbhidanLogo.jpeg";
+
 
 
 

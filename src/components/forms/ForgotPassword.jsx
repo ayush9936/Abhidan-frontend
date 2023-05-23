@@ -14,18 +14,7 @@ const ForgotPassword = ({ setForgotModel }) => {
         <div className="relative w-auto my-6 mx-auto  max-w-3xl">
           {/*content*/}
           <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white opacity-100 outline-none focus:outline-none">
-            {/*header*/}
-            {/* <div className="flex items-center justify-between px-5 py-3 gap-x-5 border-b border-solid border-slate-200 rounded-t">
-              <div className="text-xl font-semibold text-gray-800">
-                Please fill the form
-              </div>
-              <div
-                className="cursor-pointer"
-                onClick={() => setForgotModel(false)}
-              >
-                <AiOutlineClose />
-              </div>
-            </div> */}
+            
             {/*body*/}
             <div className="relative p-6 flex flex-col  justify-center items-center space-y-3">
               <p className="text-center">{<RiErrorWarningLine size={40} />}</p>

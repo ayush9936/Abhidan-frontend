@@ -1,11 +1,6 @@
 import React from "react";
 import ReactSlick from "./ReactSlick";
-
 import "./Home.css";
-
-
-
-// import About from "../About/About";
 import AboutHome from "../About/AboutHome";
 import HowitWorks from "../How_it_Works/HowitWorks";
 import AboutSlick from "../About/AboutSlick";

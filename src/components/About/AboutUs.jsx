@@ -46,27 +46,27 @@ const AboutUs = () => {
   const team = [
     {
       name: "Ashish Soni",
-      src: "https://randomuser.me/api/portraits/men/1.jpg",
+      src: require("./images/Ashish.png"),
       desc: "MERN full Stack Developer",
     },
     {
       name: "Ayush Dubey",
-      src: "https://randomuser.me/api/portraits/women/2.jpg",
-      desc: "MERN full Stack Developer"
+      src: require("./images/Ayush.png"),
+      desc: "MERN full Stack Developer",
     },
     {
       name: "Aman Gupta",
-      src: "https://randomuser.me/api/portraits/men/3.jpg",
+      src: require("./images/Aman.png"),
       desc: "Team Leader",
     },
     {
       name: "Arpit Tiwari",
-      src: "https://randomuser.me/api/portraits/women/4.jpg",
+      src: require("./images/Arpit.png"),
       desc: "Content Writer",
     },
     {
       name: "Anurag Yadav",
-      src: "https://randomuser.me/api/portraits/women/4.jpg",
+      src: "https://randomuser.me/api/portraits/men/1.jpg",
       desc: "Content Writer",
     },
   ];
@@ -159,7 +159,7 @@ const AboutUs = () => {
         </section>
 
         {/* Our Impact */}
-        <section className="bg-white mt-2">
+        <section className="bg-white pt-2">
           <div className="w-full py-2 flex flex-col items-center">
             <h2 className="text-center text-2xl font-semibold font-inter text-black ">
               Our Impact
@@ -220,7 +220,7 @@ const AboutUs = () => {
         </section>
 
         {/* Our Team */}
-        <section className="bg-white mt-2">
+        <section className="bg-white pt-2">
           <div className="w-full py-2 flex flex-col items-center">
             <h2 className="text-center text-2xl font-semibold font-inter text-black ">
               Our Team
@@ -233,7 +233,7 @@ const AboutUs = () => {
                 key={index}
                 className="w-[15rem] p-6 bg-white border border-gray-200 space-y-3 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center mt-4 "
               >
-                <img src={member.src} alt="" className="rounded-full" />
+                <img src={member.src} alt="" className="rounded-full w-[150px] h-[150px]" />
                 <h1 className="text-xl">{member.name}</h1>
                 <p>{member.desc}</p>
                 <div className="flex items-center gap-x-5">

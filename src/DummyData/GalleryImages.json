@@ -1,58 +1,58 @@
 [
     {
         "id":1,
-        "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm6K-VzQEM4XS3sr3Usp2MlONa3xsQ_JjjpQ&usqp=CAU"
+        "imgSrc" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm6K-VzQEM4XS3sr3Usp2MlONa3xsQ_JjjpQ&usqp=CAU"
     },
     {
         "id":2,
-        "img" : "https://cdn.downtoearth.org.in/library/large/2022-02-25/0.25794500_1645773147_istock-870402320.jpg"
+        "imgSrc" : "https://cdn.downtoearth.org.in/library/large/2022-02-25/0.25794500_1645773147_istock-870402320.jpg"
     },
     {
         "id":3,
-        "img" : "https://www.brainwareuniversity.ac.in/students-corner/news-gallery/wp-content/uploads/2022/09/std-crnr-news-1.jpg"
+        "imgSrc" : "https://www.brainwareuniversity.ac.in/students-corner/news-gallery/wp-content/uploads/2022/09/std-crnr-news-1.jpg"
     },
     {
         "id":4,
-        "img" : "https://thumbs.dreamstime.com/b/rural-education-ngo-activities-teaching-young-indian-children-india-outdoors-temporary-classroom-boards-child-literacy-50806157.jpg"
+        "imgSrc" : "https://thumbs.dreamstime.com/b/rural-education-ngo-activities-teaching-young-indian-children-india-outdoors-temporary-classroom-boards-child-literacy-50806157.jpg"
     },
     {
         "id":5,
-        "img" : "https://gumlet.assettype.com/knocksense%2Fimport%2F27682240%2Forigin.jpg?auto=format%2Ccompress&fit=max&format=webp&w=480&dpr=2.6`"
+        "imgSrc" : "https://gumlet.assettype.com/knocksense%2Fimport%2F27682240%2Forigin.jpg?auto=format%2Ccompress&fit=max&format=webp&w=480&dpr=2.6`"
     },
     {
         "id":6,
-        "img" : "http://webmeup.com/upload/blog/lead-image-105.png"
+        "imgSrc" : "http://webmeup.com/upload/blog/lead-image-105.png"
     },
     {
         "id":7,
-        "img" : "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+        "imgSrc" : "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
     },
     {
         "id":8,
-        "img" : "https://media.gettyimages.com/id/1297349747/photo/hot-air-balloons-flying-over-the-botan-canyon-in-turkey.jpg?s=612x612&w=gi&k=20&c=Uo_yzYm9UJu6GpKilOLGrCbiSjyMB5DsvZTYpybYxj4="
+        "imgSrc" : "https://media.gettyimages.com/id/1297349747/photo/hot-air-balloons-flying-over-the-botan-canyon-in-turkey.jpg?s=612x612&w=gi&k=20&c=Uo_yzYm9UJu6GpKilOLGrCbiSjyMB5DsvZTYpybYxj4="
     },
     {
         "id":9,
-        "img" : "https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg"
+        "imgSrc" : "https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg"
     },
     {
         "id":10,
-        "img" : "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bHVja25vdyUyMHV0dGFyJTIwcHJhZGVzaCUyMGluZGlhfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+        "imgSrc" : "https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bHVja25vdyUyMHV0dGFyJTIwcHJhZGVzaCUyMGluZGlhfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
     },
     {
         "id":11,
-        "img" : "https://thumbs.dreamstime.com/b/taj-mahal-agra-india-morning-light-reflection-water-uttar-pradesh-108954918.jpg"
+        "imgSrc" : "https://thumbs.dreamstime.com/b/taj-mahal-agra-india-morning-light-reflection-water-uttar-pradesh-108954918.jpg"
     },
     {
         "id":12,
-        "img" : "https://images.unsplash.com/photo-1574622542118-df5e8727669b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
+        "imgSrc" : "https://images.unsplash.com/photo-1574622542118-df5e8727669b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
     },
     {
         "id":13,
-        "img" : "https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg"
+        "imgSrc" : "https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg"
     },
     {
         "id":14,
-        "img" : "https://images.unsplash.com/photo-1574622542118-df5e8727669b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
+        "imgSrc" : "https://images.unsplash.com/photo-1574622542118-df5e8727669b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"
     }
 ]

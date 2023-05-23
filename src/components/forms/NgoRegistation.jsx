@@ -7,9 +7,6 @@ import app_config from "../../config";
 
 const NgoRegistation = (props) => {
   const url = app_config.back_url;
-
-  let setIsLoggedIn = props.setIsLoggedIn;
-  let accountType = props.accountType;
   const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);

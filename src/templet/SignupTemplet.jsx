@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import frameImage from "./SignupImage.jpeg";
-import LoginForm from "../components/forms/LoginForm";
-import { FcGoogle } from "react-icons/fc";
 import RegSelection from "./RegSelection";
-import { Link } from "react-router-dom";
-import LogInSelection from "./LogInSelection";
+
+
 
 const SignupTemplet = ({
   title,
@@ -32,7 +30,7 @@ const SignupTemplet = ({
           </div>
           <RegSelection setFormType={setFormType} />
         </div>
-        {formType == "donor" ? (
+        {formType === "donor" ? (
           <div className="md:w-[80%] lg:min-w-[550px] mx-auto py-2 lg:h-full max-h-screen ">
             <div className=" hidden md:block  md:w-[100%] rounded-md  ">
               <img

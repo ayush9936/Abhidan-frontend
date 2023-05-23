@@ -65,7 +65,7 @@ function Sidebar() {
           <h1 className='text-2xl font-bold' style={{display: open? "block" : "none"}} >
             Ngo<span className='text-yellow-400'>Profile </span></h1>
 
-            <div className='close-arrow' style={{marginLeft: open ? "50px" : "0px"}}><BsFillCaretLeftSquareFill onClick={toggle}/></div>
+            <div className={`close-arrow ${!open && "rotate-180"}`} style={{marginLeft: open ? "50px" : "0px"}}><BsFillCaretLeftSquareFill onClick={toggle}/></div>
         </div>
         {   
           sideMenu.map((item,index)=>(
@@ -80,7 +80,7 @@ function Sidebar() {
 
 </div >
 
-<div className='renderPages w-[100%] '>
+<div className='renderPages w-[100%] pl-5' >
 {renderPage()}
 </div>
       </div>
