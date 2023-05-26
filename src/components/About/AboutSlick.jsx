@@ -10,6 +10,7 @@ const images = [Logo, image2, Logo, image2, Logo, image2];
 
 
 function SampleNextArrow(props) {
+  
   const { className, style, onClick } = props;
   return (
     <div
@@ -98,8 +99,9 @@ const AboutSlick = ( ) => {
                     </div>
 
                     <div className="card-content">
-                      <h5 className="name"> {data.name}</h5>
-                      <p className="description">{data.desc}</p>
+                      <h5 className="name text-xl text-center"><b>{data.name}</b> </h5>
+                      <p className="title text-md flex ">{data.title}</p>
+                      <p className="description text-sm justify-center px-4">"{`${data.desc}`}"</p>
                     </div>
                   </div>
                 </div>

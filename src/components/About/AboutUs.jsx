@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import CountUp from "react-countup"; 
 import img4 from "./images/img4.png";
 import {
@@ -10,6 +10,17 @@ import {
 
 
 const AboutUs = () => {
+  const navigate = useNavigate();
+
+  const donorData = JSON.parse(localStorage.getItem("token"));
+
+  function getDonationForm() {
+    if (donorData) {
+      navigate("/ngo");
+    } else {
+      navigate("/login");
+    }
+  }
   const images = [
     {
       src: "https://picsum.photos/id/1015/800/400",
@@ -91,7 +102,7 @@ const AboutUs = () => {
 
 	return (
     <>
-      <div className="  overflow-x-hidden px-3 mb-4 ">
+      <div className="  overflow-x-hidden px-3  bg-white ">
         {/* Our Purpose */}
         <section className="w-full">
           <div className="bg-[#f8f9fa] grid grid-cols-1 mt-5 space-y-4 py-3  justify-center md:grid-cols-2 gap-x-4">
@@ -233,7 +244,11 @@ const AboutUs = () => {
                 key={index}
                 className="w-[15rem] p-6 bg-white border border-gray-200 space-y-3 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center mt-4 "
               >
-                <img src={member.src} alt="" className="rounded-full w-[150px] h-[150px]" />
+                <img
+                  src={member.src}
+                  alt=""
+                  className="rounded-full w-[150px] h-[150px]"
+                />
                 <h1 className="text-xl">{member.name}</h1>
                 <p>{member.desc}</p>
                 <div className="flex items-center gap-x-5">
@@ -275,8 +290,11 @@ const AboutUs = () => {
                 Request a Campaign
               </button>
             </Link>
-            <Link to={"#"}>
-              <button className="w-full border rounded px-3 py-2 text-white bg-green-500 hover:bg-green-700 shadow-2xl shadow-green-500 capitalize">
+            <Link >
+              <button
+                className="w-full border rounded px-3 py-2 text-white bg-green-500 hover:bg-green-700 shadow-2xl shadow-green-500 capitalize"
+                onClick={() => getDonationForm()}
+              >
                 Donate Now
               </button>
             </Link>

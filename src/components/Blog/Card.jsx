@@ -6,6 +6,8 @@ const Card = (props) => {
   const course = props.courseData;
   let likedCourses = props.likedCourses;
   let setLikedCourses = props.setLikedCourses;
+  let setFullBlogModel = props.setFullBlogModel;
+  let setBlogData = props.setBlogData;
 
   function clickHandler() {
     // logic
@@ -25,9 +27,13 @@ const Card = (props) => {
     }
   }
   return (
-    <div className="w-[300px] bg-bgDark rounded-xl px-2 py-1 relative border shadow-xl overflow-y-hidden">
-      <div className="relative">
-        <img src={course.image.url} alt={course.image.alt} className="rounded-md w-[300px] h-[225px] " />
+    <div className="w-[300px] bg-white rounded-xl cursor-pointer px-2 py-1 relative hover:scale-105 border shadow-xl overflow-y-hidden">
+      <div className="relative ">
+        <img
+          src={course.image.url}
+          alt={course.image.alt}
+          className="rounded-md w-[300px] h-[225px]  "
+        />
         <div className="w-[40px] h-[40px] bg-white rounded-full absolute right-2 bottom-[-20px] grid place-items-center">
           <button>
             {likedCourses.includes(course.id) ? (
@@ -38,11 +44,11 @@ const Card = (props) => {
           </button>
         </div>
       </div>
-      <div className="p-4">
+      <div className="p-4" onClick={() => { setFullBlogModel(true); setBlogData(course)}}>
         <p className="text-black font-semibold text-lg leading-6">
-          {course.title.length > 40 ?
-            course.title.substr(0, 100) + "...." :
-          course.title}
+          {course.title.length > 40
+            ? course.title.substr(0, 100) + "...."
+            : course.title}
         </p>
         <p className="mt-2 text-black">
           {course.description.length > 100

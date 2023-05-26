@@ -6,6 +6,7 @@ const Gallery = () => {
 
   const [imgmodel, setImgmodel] = useState(false);
   const [tempimgSrc, setTempimgSrc] = useState('');
+  
 
   const getImg=(imgSrc) => {
     setTempimgSrc(imgSrc);

@@ -1,12 +1,24 @@
 import React,{useEffect, useRef, useState} from 'react'
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import data from "../../DummyData/homeSlideData.json"
+import { useNavigate } from 'react-router-dom';
 
 
 let count = 0;
 let slideInterval;
 
 const AboutSlide = () => {
+  const navigate = useNavigate();
+
+  const donorData = JSON.parse(localStorage.getItem("token"));
+
+  function getDonationForm() {
+    if (donorData) {
+      navigate("/ngo");
+    } else {
+      navigate("/login");
+    }
+  }
     let reviews = data;
   const [index, setIndex] = useState(0);
 
@@ -95,7 +107,10 @@ const AboutSlide = () => {
                 <p className="text-sm md:text-lg text-gray-100  content-center px-[5rem]  text-center">
                   {reviews[currentIndex].desc}
                 </p>
-                <button className="px-3 py-2 mt-4 outline outline-yellow-400 hover:scale-105 rounded-md hover:bg-yellow-400 text-white ">
+                <button
+                  className="px-3 py-2 mt-4 outline outline-yellow-400 hover:scale-105 rounded-md hover:bg-yellow-400 text-white "
+                  onClick={() => getDonationForm()}
+                >
                   Donate
                 </button>
               </div>

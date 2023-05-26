@@ -4,33 +4,14 @@
 }
 
 
-.sliderContent {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  width: 100%;
-  padding: 20px;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.132);
-  width:auto;
 
-  
-}
 
-.sliderContent h3 {
-  font-size: 30px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-  .sliderContent h3 {
-    font-size: 18px;
+@media only  screen and(max-width: 768px) {
+  .slider-item img{
+    width:50%;
+    height:25rem;
+    object-fit: cover;
   }
-  
 }
 /* end  */
 

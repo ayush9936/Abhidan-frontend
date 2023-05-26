@@ -155,6 +155,12 @@
   background: #fff;
   padding: 3px;
 }
+.description {
+ 
+    text-align: justify;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
 
 
 

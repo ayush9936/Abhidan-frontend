@@ -215,9 +215,8 @@ const NgoRegistation = (props) => {
             Upload file<sup className="text-pink-200">*</sup>
           </label>
           <input
-            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+            className="block w-full h-[2rem] file:h-[2rem] file:bg-yellow-500 file:text-white border-[1px] bg-gray-300 file:border-none rounded-md  text-sm "
             id="file_input"
-            className="form-control"
             type="file"
             accept="image/*"
             onChange={handleImageChange}
@@ -244,7 +243,7 @@ const NgoRegistation = (props) => {
               Established Date:<sup className="text-pink-200">*</sup>
             </p>
             <input
-              type="text"
+              type="date"
               name="established_date"
               id="established_date"
               placeholder="Enter register id:"

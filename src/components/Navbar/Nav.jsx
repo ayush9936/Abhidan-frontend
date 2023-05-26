@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import { toast } from "react-hot-toast";
 import logo from "./navlogo.png";
 
-const UserDropDown = ({ isLoggedIn, setIsLoggedIn }) => {
+const UserDropDown = ({isLoggedIn, setIsLoggedIn,isNgoLoggedIn, setIsNgoLoggedIn }) => {
+  const navigate = useNavigate();
   let [dropOpen, setDropOpen] = useState(false);
+  const data = JSON.parse(localStorage.getItem('token'))
+  const ngoData = JSON.parse(localStorage.getItem('ngo_token'))
+  console.log(data);
 
   return (
     <>
@@ -15,7 +19,7 @@ const UserDropDown = ({ isLoggedIn, setIsLoggedIn }) => {
           <img
             onClick={() => setDropOpen(true)}
             className="h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=80"
+            src="https://www.pngall.com/wp-content/uploads/5/Profile-Male-PNG.png"
             alt="Your avatar"
           />
         </button>
@@ -36,16 +40,32 @@ const UserDropDown = ({ isLoggedIn, setIsLoggedIn }) => {
               : "hidden"
           }`}
         >
-          <Link to={"/donor/myProfile"}>
-            <span className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">
-              my Profile
-            </span>
-          </Link>
+          {data && (
+            <>
+              <Link to={"/donor/myProfile"}>
+                <span className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">
+                  my Profile
+                </span>
+              </Link>
+            </>
+          )}
+          {ngoData && (
+            <>
+              <Link to={"/ngo/myProfile"}>
+                <span className="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">
+                  my Profile
+                </span>
+              </Link>
+            </>
+          )}
 
           <Link
             to={"/login"}
             onClick={() => {
               setIsLoggedIn(false);
+              setIsNgoLoggedIn(false);
+              localStorage.clear();
+              navigate("/login");
               toast.success("Log out successfully");
             }}
           >
@@ -60,7 +80,7 @@ const UserDropDown = ({ isLoggedIn, setIsLoggedIn }) => {
         <div className="flex items-center">
           <img
             className="h-[42px] w-[42px] border-2 border-gray-600 rounded-full object-cover"
-            src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=256&q=80"
+            src="https://www.pngall.com/wp-content/uploads/5/Profile-Male-PNG.png"
             alt="Your avatar"
           />
           <span className="ml-3 text-xl font-semibold text-gray-700 ">
@@ -68,15 +88,32 @@ const UserDropDown = ({ isLoggedIn, setIsLoggedIn }) => {
           </span>
         </div>
         <div className="mt-4 ">
-          <Link to={"/donor/myProfile"}>
-            <span className="block text-gray-500 text-lg hover:text-gray-700">
-              My Profile
-            </span>
-          </Link>
+          { data  && (
+            <>
+              <Link to={"/donor/myProfile"}>
+                <span className="block text-gray-500 text-lg hover:text-gray-700">
+                  My Profile
+                </span>
+              </Link>
+            </>
+          )}
+          { ngoData  && (
+            <>
+              <Link to={"/ngo/myProfile"}>
+                <span className="block text-gray-500 text-lg hover:text-gray-700">
+                  My Profile
+                </span>
+              </Link>
+            </>
+          )}
+
           <Link
             to={"/login"}
             onClick={() => {
               setIsLoggedIn(false);
+              setIsNgoLoggedIn(false);
+              localStorage.clear();
+              navigate("/login");
               toast.success("Log out successfully");
             }}
           >
@@ -90,7 +127,13 @@ const UserDropDown = ({ isLoggedIn, setIsLoggedIn }) => {
   );
 };
 
-const Nav = ({ isLoggedIn, setIsLoggedIn }) => {
+const Nav = ({
+  isLoggedIn,
+  setIsLoggedIn,
+  isNgoLoggedIn,
+  setIsNgoLoggedIn,
+
+}) => {
   const NavItems = [
     { id: 1, title: "HOME", link: "/" },
     { id: 2, title: "ABOUT", link: "/about" },
@@ -99,6 +142,8 @@ const Nav = ({ isLoggedIn, setIsLoggedIn }) => {
     { id: 5, title: "GALLERY", link: "/gallery" },
   ];
   let [open, setOpen] = useState(false);
+  const data = JSON.parse(localStorage.getItem("token"));
+  const ngoData = JSON.parse(localStorage.getItem("ngo_token"));
 
   return (
     <div className=" font-[Poppins] bg-white   h-[70px] z-10 sticky top-0 shadow-2xl ">
@@ -106,7 +151,11 @@ const Nav = ({ isLoggedIn, setIsLoggedIn }) => {
         <div className="md:flex h-[70px] shrink-md items-center justify-between py-4 md:px-10 px-7">
           <div className="font-bold text-2xl cursor-pointer flex  items-center font-[Poppins]  text-gray-800">
             <span className="fixed mt-1 px-2 py-2">
-              <img src={logo} className=" w-[62px] mt-2 md:w-[82px]" alt="abhidan" />
+              <img
+                src={logo}
+                className=" w-[62px] mt-2 md:w-[82px]"
+                alt="abhidan"
+              />
             </span>
           </div>
 
@@ -147,8 +196,9 @@ const Nav = ({ isLoggedIn, setIsLoggedIn }) => {
               onClick={() => setOpen(false)}
               className="flex flex-col ml-3   md:flex-row"
             >
-              {/* agar login nhi hai to ye dikhao */}
-              {!isLoggedIn && (
+              {/* agar dono me se koi login na ho to ye dikhao */}
+              
+              {(!data && !ngoData) && (
                 <NavLink to="/login">
                   <button
                     className="bg-indigo-600 text-white font-[Poppins] py-2 px-6 rounded md:ml-8 hover:bg-indigo-400 
@@ -158,16 +208,21 @@ const Nav = ({ isLoggedIn, setIsLoggedIn }) => {
                   </button>
                 </NavLink>
               )}
-              {isLoggedIn && (
+              {/* agar dono me se koi login hai to to ye dikaho */}
+              {(data || ngoData ) && (
                 <>
                   {/* login krne ke baad */}
                   <div className="mx-2 ">
-                    <UserDropDown setIsLoggedIn={setIsLoggedIn} />
+                    <UserDropDown
+                      isLoggedIn={isLoggedIn}
+                      setIsLoggedIn={setIsLoggedIn}
+                      setIsNgoLoggedIn={setIsNgoLoggedIn}
+                      isNgoLoggedIn={isNgoLoggedIn}
+                    />
                   </div>
                 </>
               )}
-
-              {/* agar login hai to ye dikhao */}
+             
             </div>
           </ul>
         </div>

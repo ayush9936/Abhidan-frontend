@@ -11,19 +11,25 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Nav from "./components/Navbar/Nav";
 import DonorProfile from "./components/profiles/donor_Profile/DonorProfile";
-import DonationForm from "./components/forms/DonateForm"
+import DonationForm from "./components/forms/DonateForm";
 
-import Sidebar from "./components/profiles/Ngoprofiles/Sidebar/Sidebar";
-
+import Sidebar from "./components/profiles/Ngoprofiles/Sidebar";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isNgoLoggedIn, setIsNgoLoggedIn] = useState(false);
+  const donorToken = JSON.parse(localStorage.getItem('token'));
+  const ngoToken = JSON.parse(localStorage.getItem('ngo_token'));
   return (
     <div>
       <BrowserRouter>
         {/* <Navbar /> */}
-        <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+        <Nav
+          isLoggedIn={isLoggedIn}
+          setIsLoggedIn={setIsLoggedIn}
+          isNgoLoggedIn={isNgoLoggedIn}
+          setIsNgoLoggedIn={setIsNgoLoggedIn}
+        />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -35,25 +41,20 @@ function App() {
                 setIsNgoLoggedIn={setIsNgoLoggedIn}
               />
             }
-          /> 
-          {isLoggedIn && (
+          />
+          {donorToken && (
             <Route path="/donor/myProfile" element={<DonorProfile />} />
           )}
-           
-            <Route path="/ngo/myProfile" element={<Sidebar/>}/>
-        
+
+          {ngoToken && (
+            <Route path="/ngo/myProfile" element={<Sidebar />} />
+          )}
+
           <Route path="/signup" element={<Signup />} />
           <Route path="/ngo" element={<Ngopage />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/donate-form" element={<DonationForm />} />
-          <Route
-            path="/blog"
-            element={
-              
-                <Blog />
-              
-            }
-          />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/howitworks" element={<HowitWorks />} />
         </Routes>
       </BrowserRouter>

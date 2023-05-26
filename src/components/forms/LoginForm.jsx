@@ -33,19 +33,14 @@ const LoginForm = ({ setIsLoggedIn }) => {
 
     axios
       .post(url + "/donor-login", formData)
+      // .post("http://localhost:1300/api/donor-login",formData)
       .then((data) => {
         console.log("UserData", data);
         window.localStorage.setItem("token", JSON.stringify(data.data));
 
-        // console.log(res.data);
-        // localStorage.setItem("token", JSON.stringify(res.data.data));
-
         setIsLoggedIn(true);
-
-        setTimeout(() => {
-          toast.success("Logged In Successfully!");
-          navigate("/");
-        }, 1000);
+        toast.success("Logged In Successfully!");
+        navigate("/");
 
         setFormData("");
       })
@@ -75,7 +70,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
         className="flex flex-col gap-y-3 mt-1 px-3 py-2"
       >
         <label htmlFor="email" className="w-full">
-          <p className="text-lg text-[#292929] mb-1 leading-[1.375rem]">
+          <p className=" text-md md:text-lg text-[#292929] mb-1 leading-[1.375rem]">
             Email Address:<sup className="text-pink-200">*</sup>
           </p>
 
@@ -87,14 +82,14 @@ const LoginForm = ({ setIsLoggedIn }) => {
             placeholder="Enter email address"
             value={formData?.email || " "}
             onChange={handleChange}
-            className="bg-[#F1F6F9] rounded-[0.5rem] text-[#394867] w-full p-[12px]"
+            className="bg-[#F1F6F9] h-[2.5rem] rounded-[0.5rem] text-[#394867] w-full p-[12px]"
           />
           {errors && (
             <p className="text-red-500 ml-5 text-sm ">{errors.email}</p>
           )}
         </label>
         <label htmlFor="" className="w-full relative  ">
-          <p className="text-lg text-[#292929] mb-1 leading-[1.375rem]">
+          <p className="text-md md:text-lg text-[#292929] mb-1 leading-[1.375rem]">
             Password:<sup className="text-pink-200">*</sup>
           </p>
 
@@ -108,7 +103,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
             placeholder="Enter password "
             value={formData?.password || ""}
             onChange={handleChange}
-            className="bg-[#F1F6F9]  rounded-[0.5rem] text-[#394867] w-full p-[12px] "
+            className="bg-[#F1F6F9] h-[2.5rem] rounded-[0.5rem] text-[#394867] w-full p-[12px] "
           />
           {errors && (
             <p className="text-red-500 ml-5 text-sm">{errors.password}</p>
@@ -143,7 +138,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
         <p className="text-richblack-700 font-medium leading-[1.375rem">OR</p>
         <div className="h-[1px] w-[45%] bg-richblack-700"></div>
       </div>
-      <div className="text-gray-500 mt-3 text-center">
+      <div className="text-gray-500 mt-3 mb-2 text-center">
         Don't have Account?{" "}
         <Link
           to="/signup"

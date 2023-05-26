@@ -32,7 +32,7 @@ const Circle = () => {
               <div className="Circle">
                 <div className="inner-circle">
                   <h2 >
-                  Reguler 
+                  Regular 
                       <span className="circle-txt" style={{ color: "#eb9309" }}>
                    
                     Updates

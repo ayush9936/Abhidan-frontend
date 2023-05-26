@@ -8,6 +8,11 @@
   border-width: 0;
   border-style: 1px solid black ;
   box-sizing: border-box;
+  scrollbar-width: thin;
+}
+
+.setScrollbar::-webkit-scrollbar {
+  width: 5px;
 }
 
 body {

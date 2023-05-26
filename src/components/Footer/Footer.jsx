@@ -19,7 +19,7 @@ const Footer = () => {
                   />
                 </div>
                 <p className="text-orange-400 text-sm md:text-lg">
-                  BBDU Faizabad road, Lucknow{" "}
+                  BBDNITM Faizabad road, Lucknow{" "}
                 </p>
                 <p className="text-orange-400 text-sm md:text-lg ">
                   <strong>Phone:</strong>+91 8888 8888 88
@@ -70,13 +70,13 @@ const Footer = () => {
                     Ngo Description
                   </li>
                   <li className="pb-2 text-orange-400 hover:text-yellow-600">
-                    Ngo Description
+                    Near by NGO's
                   </li>
                   <li className="pb-2 text-orange-400 hover:text-yellow-600">
-                    Ngo Description
+                    Help
                   </li>
                   <li className="pb-2 text-orange-400 hover:text-yellow-600">
-                    Ngo Description
+                    Connect With Us
                   </li>
                 </ul>
               </div>

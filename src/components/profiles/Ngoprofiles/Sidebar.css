@@ -2,7 +2,7 @@
 /* css for sidebar */
 .side-bar{
     background-color: white;
-    height: 100vh;
+    height: 90vh;
     width:250px;
     transition: all 0.5s;
     position: absolute;
@@ -52,5 +52,7 @@ transition: all 0.5s;
   justify-content: center;
   align-items: center;
 }
+
+
 
 

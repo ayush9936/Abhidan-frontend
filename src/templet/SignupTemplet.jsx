@@ -37,7 +37,7 @@ const SignupTemplet = ({
                 src={frameImage}
                 alt="frame"
                 loading="lazy"
-                className={` w-full  md:h-[400px] md:w-[100%] lg:h-[700px] `}
+                className={` w-full md:h-[400px] md:w-[100%] lg:h-[550px]`}
               />
             </div>
           </div>
