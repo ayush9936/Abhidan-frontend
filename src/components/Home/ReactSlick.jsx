@@ -90,7 +90,7 @@ const ReactSlick = () => {
               
               <h1 className="text-lg md:text-3xl  font-bold text-gray-100  uppercase ">Helping Each Other Can Make Better World</h1>
               <p className="text-sm md:text-md text-gray-100  content-center px-[5rem]  text-center">“Happiness doesn't result from what we get, but from what we give". </p>
-              <button className="px-4 py-2 mt-4 outline outline-yellow-400 hover:scale-105 rounded-md hover:bg-yellow-400 text-white ">
+              <button className="px-4 py-2 mt-4 outline outline-yellow-400 hover:scale-105 rounded-md hover:bg-yellow-400 text-white " onClick={() =>getDonationForm()}>
                   Donate
                 </button>
             </div></div>
@@ -107,7 +107,7 @@ const ReactSlick = () => {
               
               <h1 className="text-lg md:text-3xl  font-bold text-gray-100  uppercase ">They Are Wait For Your Help</h1>
               <p className="text-sm md:text-md text-gray-100  content-center px-[5rem]  text-center">“Happiness doesn’t result from what we get, but from what we give". </p>
-              <button className="px-4 py-2 mt-4 outline outline-yellow-400 hover:scale-105 rounded-md hover:bg-yellow-400 text-white ">
+              <button className="px-4 py-2 mt-4 outline outline-yellow-400 hover:scale-105 rounded-md hover:bg-yellow-400 text-white " onClick={() =>getDonationForm()}>
                   Donate
                 </button>
           </div></div></div>
