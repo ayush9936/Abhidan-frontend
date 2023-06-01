@@ -9,6 +9,8 @@ import {
 import "./Sidebar.css";
 import dp from "../Ngoprofiles/dashboard-profile.png";
 import app_config from "../../../config";
+import {Dna} from "react-loader-spinner";
+
 
 const NgoProfile = () => {
   const [ngoData, setNgoData] = useState([]);
@@ -44,8 +46,15 @@ const NgoProfile = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center font-bold text-green-400">
-        Loading...{" "}
+      <div className="flex justify-center">
+       <Dna
+  visible={true}
+  height="80"
+  width="80"
+  ariaLabel="dna-loading"
+  wrapperStyle={{}}
+  wrapperClass="dna-wrapper"
+/>
       </div>
     );
   }

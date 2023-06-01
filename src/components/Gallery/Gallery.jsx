@@ -1,11 +1,22 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Images from "../../DummyData/GalleryImages.json";
 import {AiOutlineClose} from "react-icons/ai"
+import {Dna} from "react-loader-spinner";
+import Footer from "../Footer/Footer"
+
 
 const Gallery = () => {
 
   const [imgmodel, setImgmodel] = useState(false);
   const [tempimgSrc, setTempimgSrc] = useState('');
+  const [loading,setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+  setTimeout(()=>{
+    setLoading(false);
+  },2000)
+    
+  }, [])
   
 
   const getImg=(imgSrc) => {
@@ -40,7 +51,21 @@ const Gallery = () => {
         )}
       </div>
       {/* Images */}
-      <div className="px-3 py-1">
+    {loading ? (
+     <div className="flex justify-center">
+       <Dna
+      visible={true}
+      height="80"
+      width="80"
+      ariaLabel="dna-loading"
+      wrapperStyle={{}}
+      wrapperClass="dna-wrapper"
+    />
+     </div>
+    )
+  :
+  (
+<div className="px-3 py-1">
         <div className="w-full"></div>
         <div className=" columns-1 md:columns-2 lg:columns-3 m-3 mt-3 ">
           {Images.map((img, index) => (
@@ -59,9 +84,13 @@ const Gallery = () => {
             </>
           ))}
         </div>
+<Footer/>
       </div>
+        
+  )}
+      
 
-      {/* <Footer /> */}
+    
     </>
   );
 };

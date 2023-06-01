@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import ForgotPassword from "./ForgotPassword";
 import FormValidation from "./FormValidation";
 import app_config from "../../config";
+import { ColorRing } from "react-loader-spinner";
 
 const NgoLoginForm = ({ setIsNgoLoggedIn }) => {
   const url = app_config.back_url;
@@ -20,7 +21,7 @@ const NgoLoginForm = ({ setIsNgoLoggedIn }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [forgotModel, setForgotModel] = useState(false);
   const [errors, setErrors] = useState(false);
-
+  const [loading, setLoading] = useState(false);
   function handleChange(e) {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -30,33 +31,35 @@ const NgoLoginForm = ({ setIsNgoLoggedIn }) => {
     event.preventDefault();
 
     setErrors(FormValidation(formData));
-
+    setLoading(true);
     axios
       .post(url + "/api/ngo-login", formData)
       .then((data) => {
         console.log(data);
         localStorage.setItem("ngo_token", JSON.stringify(data));
+        setLoading(false);
         setIsNgoLoggedIn(true);
-        setTimeout(() => {
-          
-          toast.success("NGO Logged In Successfully!");
-          navigate("/");
-        }, 1000);
+
+        toast.success("NGO Logged In Successfully!");
+        navigate("/");
       })
       .catch((error) => {
         if (error.response.status === 400) {
           toast.error("Please fill all field!");
+          setLoading(false);
           // navigate("/login");
         }
 
         if (error.response.status === 404) {
           toast.error("NGO not found");
-          navigate("/login");
+          setLoading(false);
+          // navigate("/login");
         }
 
         if (error.response.status === 401) {
           toast.error("Invalid email or password!");
-          navigate("/login");
+          setLoading(false);
+          // navigate("/login");
         }
       });
   }
@@ -120,7 +123,21 @@ const NgoLoginForm = ({ setIsNgoLoggedIn }) => {
           className=" bg-yellow-50 hover:bg-yellow-500 rounded-[8px] font-medium text-richblack-900 py-3"
           type="submit"
         >
-          Sign In
+          {loading ? (
+            <div className="flex justify-center">
+              <ColorRing
+                visible={true}
+                height="30"
+                width="60"
+                ariaLabel="blocks-loading"
+                wrapperStyle={{}}
+                wrapperClass="blocks-wrapper"
+                colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
+              />{" "}
+            </div>
+          ) : (
+            "  Sign In"
+          )}
         </button>
       </form>
       <button className="float-right">

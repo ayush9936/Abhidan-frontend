@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import FormValidation from "./FormValidation";
 import ForgotPassword from "./ForgotPassword";
 import app_config from "../../config";
+import { ColorRing } from "react-loader-spinner";
 
 const LoginForm = ({ setIsLoggedIn }) => {
   const url = app_config.back_url;
@@ -19,6 +20,7 @@ const LoginForm = ({ setIsLoggedIn }) => {
 
   const [showPassword, setShowPassword] = useState(false);
   const [forgotModel, setForgotModel] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -30,14 +32,13 @@ const LoginForm = ({ setIsLoggedIn }) => {
 
     setErrors(FormValidation(formData));
     console.log("errors", errors);
-
+    setLoading(true);
     axios
       .post(url + "/api/donor-login", formData)
-      // .post("http://localhost:1300/api/donor-login",formData)
       .then((data) => {
         console.log("UserData", data);
         window.localStorage.setItem("token", JSON.stringify(data.data));
-
+        setLoading(false);
         setIsLoggedIn(true);
         toast.success("Logged In Successfully!");
         navigate("/");
@@ -47,7 +48,8 @@ const LoginForm = ({ setIsLoggedIn }) => {
 
       .catch((error) => {
         if (error.response.status === 400) {
-          return toast.error("Please fill all field!");
+           toast.error("Please fill all field!");
+
           // navigate("/login");
         }
 
@@ -125,7 +127,21 @@ const LoginForm = ({ setIsLoggedIn }) => {
           className=" bg-yellow-50 hover:bg-yellow-500 rounded-[8px] font-medium text-richblack-900 py-3"
           type="submit"
         >
-          Sign In
+          {loading ? (
+            <div className="flex justify-center">
+              <ColorRing
+                visible={true}
+                height="30"
+                width="80"
+                ariaLabel="blocks-loading"
+                wrapperStyle={{}}
+                wrapperClass="blocks-wrapper"
+                colors={["#e15b64", "#f47e60", "#f8b26a", "#abbd81", "#849b87"]}
+              />{" "}
+            </div>
+          ) : (
+            "Sign In"
+          )}
         </button>
       </form>
       <button onClick={() => setForgotModel(true)} className="float-right">

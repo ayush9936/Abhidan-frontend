@@ -4,6 +4,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import app_config from "../../config";
+import { ColorRing } from "react-loader-spinner";
 
 const SignupForm = () => {
   const url = app_config.back_url;
@@ -21,6 +22,7 @@ const SignupForm = () => {
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   function handleChange(e) {
     console.log(formData);
@@ -32,31 +34,34 @@ const SignupForm = () => {
   async function handleSubmit(event) {
     event.preventDefault();
     console.log("formdata", formData);
-
+    setLoading(true);
     axios
       .post(url + "/api/register-user", formData)
       .then((res) => {
         console.log(res.data);
 
         //  window.localStorage.setItem("token", res.data);
+        setLoading(false);
 
-        setTimeout(() => {
-          toast.success("Sign Up successfully");
-          navigate("/login");
-        }, 1000);
+        toast.success("Sign Up successfully");
+        navigate("/login");
+
         setFormData(" ");
       })
       .catch((error) => {
         console.log(error.response.status);
         if (error.response.status === 422) {
           toast.error("User is already present");
+          setLoading(false);
         }
 
         if (error.response.status === 400) {
           toast.error("Please fill all fields!");
+          setLoading(false);
         }
         if (error.response.status === 500) {
           toast.error("Something Wrong!");
+          setLoading(false);
           console.log(error);
         }
       });
@@ -169,7 +174,27 @@ const SignupForm = () => {
             type="submit"
             className=" bg-yellow-50 hover:bg-yellow-500 rounded-[8px] font-medium text-richblack-900 py-3"
           >
-            Sign Up
+            {loading ? (
+              <div className="flex justify-center">
+                <ColorRing
+                  visible={true}
+                  height="30"
+                  width="60"
+                  ariaLabel="blocks-loading"
+                  wrapperStyle={{}}
+                  wrapperClass="blocks-wrapper"
+                  colors={[
+                    "#e15b64",
+                    "#f47e60",
+                    "#f8b26a",
+                    "#abbd81",
+                    "#849b87",
+                  ]}
+                />{" "}
+              </div>
+            ) : (
+              "Sign Up"
+            )}
           </button>
         </form>
         <div className="flex w-full items-center mt-4  pl-4 gap-x-2">
