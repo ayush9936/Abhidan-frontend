@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NgoProfile from "./NgoProfile";
-import About from "./About";
+import Pending from "./Pending";
 import { NavLink } from "react-router-dom";
 import Approve from "./Approve";
 import {
@@ -24,8 +24,8 @@ function Sidebar(ngoData) {
     switch (currentPage) {
       case "ngo":
         return <NgoProfile />;
-      case "about":
-        return <About />;
+      case "pending":
+        return <Pending />;
       case "approve":
         return <Approve />;
       default:
@@ -48,7 +48,7 @@ function Sidebar(ngoData) {
     },
     {
       name: "Pending Request",
-      page: "about",
+      page: "pending",
       icon: <BsFillExclamationOctagonFill />,
     },
     {

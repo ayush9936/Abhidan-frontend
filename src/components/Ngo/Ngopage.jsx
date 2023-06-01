@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import Chat from "../Chat/Chat"
 import "./Ngopage.css";
 import Modal from "../forms/DonateForm";
 import Footer from "../Footer/Footer";
@@ -13,7 +13,7 @@ const Ngopage = () => {
   const navigate = useNavigate();
   // console.log(url);
 
-  const [showModal, setShowModal] = useState(false);
+  
  
 
   const token = JSON.parse(localStorage.getItem("token"));
@@ -22,8 +22,8 @@ const Ngopage = () => {
   
   const getNgosData = () => {
     axios
-      .get(url + `/all-ngo`)
-      // .get("http://localhost:1300/api/all-ngo")
+      .get(url + `/api/all-ngo`)
+      
       .then((res) => {
         console.log(res);
          setgetNgoData(res.data.data);
@@ -43,6 +43,15 @@ const Ngopage = () => {
        <Modal userId={userId} />
      } else {
        navigate('/login');
+    }
+  }
+
+  function Chat(userId){
+    if(token){
+      navigate("/Chat");
+      <Chat userId={userId}/>
+    }else{
+      navigate("/login")
     }
   }
 
@@ -146,6 +155,19 @@ const Ngopage = () => {
                       {" "}
                       Donate
                     </button>
+
+                    <button
+                      type="submit"
+                      className=" px-3 py-1 mt-2 mx-2 text-lg rounded-md border-2 border-yellow-400   hover:bg-yellow-400 "
+                      onClick={() => Chat(ngosData._id)}
+                    >
+                      {" "}
+                      Chat
+                    </button>
+
+                  
+
+
                   </div>
                 </div>
               </div>

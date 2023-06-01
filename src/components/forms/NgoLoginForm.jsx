@@ -32,7 +32,7 @@ const NgoLoginForm = ({ setIsNgoLoggedIn }) => {
     setErrors(FormValidation(formData));
 
     axios
-      .post(url + "/ngo-login", formData)
+      .post(url + "/api/ngo-login", formData)
       .then((data) => {
         console.log(data);
         localStorage.setItem("ngo_token", JSON.stringify(data));

@@ -34,7 +34,7 @@ const SignupForm = () => {
     console.log("formdata", formData);
 
     axios
-      .post(url + "/register-user", formData)
+      .post(url + "/api/register-user", formData)
       .then((res) => {
         console.log(res.data);
 

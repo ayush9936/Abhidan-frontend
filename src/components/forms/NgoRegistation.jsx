@@ -12,6 +12,7 @@ const NgoRegistation = (props) => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
+
   const [formData, setFormData] = useState({
     ngo_name: "",
     image: "",
@@ -37,21 +38,22 @@ const NgoRegistation = (props) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value, ["image"]: image });
   }
+
   // console.log(formData);
 
   async function handleSubmit(event) {
-    event.preventDefault();
-
+    event.preventDefault()
     if (formData.password !== formData.confirm_password) {
       toast.error("Password does not match!");
       return;
     }
 
     axios
-      .post(url + "/register-ngo", formData)
+      .post(url + "/api/register-ngo", formData)
       .then((res) => {
         console.log(res.data);
         setTimeout(() => {
+        
           toast.success("NGO registation successfully!");
           navigate("/login");
         }, 1000);
@@ -276,6 +278,7 @@ const NgoRegistation = (props) => {
         >
           Sign Up
         </button>
+        
       </form>
       <div className="flex w-full items-center mt-4  pl-4 gap-x-2">
         <div className="h-[1px] w-[45%] bg-richblack-700"></div>

@@ -1,6 +1,6 @@
-import React from 'react'
-import {Link} from "react-router-dom"
-import footer from "./nav_logo.png"
+import React from "react";
+import { Link } from "react-router-dom";
+import footer from "./nav_logo.png";
 
 const Footer = () => {
   return (
@@ -35,25 +35,34 @@ const Footer = () => {
                   Useful Links
                 </h3>
                 <ul className="text-gray-500 pl-2">
-                  <li className="pb-2 text-orange-400">Home</li>
-                  <li className="pb-2 text-orange-400 hover:text-yellow-600">
-                    About us
-                  </li>
-                  <li className="pb-2 text-orange-400 hover:text-yellow-600">
-                    Ngo's
-                  </li>
-                  <li className="pb-2 text-orange-400 hover:text-yellow-600">
-                    Blog
-                  </li>
-                  <li className="pb-2 text-orange-400 hover:text-yellow-600">
-                    Gallery
-                  </li>
-                  <li className="pb-2 text-orange-400 hover:text-yellow-600">
-                    Term of Services
-                  </li>
-                  <li className="pb-2 text-orange-400 hover:text-yellow-600">
-                    Privacy Policy
-                  </li>
+                  <Link to={"/"}>
+                    {" "}
+                    <li className="pb-2 text-orange-400">Home</li>
+                  </Link>
+                  <Link to={"/about"}>
+                    {" "}
+                    <li className="pb-2 text-orange-400 hover:text-yellow-600">
+                      About us
+                    </li>
+                  </Link>
+                  <Link to={"/ngo"}>
+                    {" "}
+                    <li className="pb-2 text-orange-400 hover:text-yellow-600">
+                      Ngo's
+                    </li>{" "}
+                  </Link>
+                  <Link to={"/blog"}>
+                    {" "}
+                    <li className="pb-2 text-orange-400 hover:text-yellow-600">
+                      Blog
+                    </li>{" "}
+                  </Link>
+                  <Link to={"/gallery"}>
+                    {" "}
+                    <li className="pb-2 text-orange-400 hover:text-yellow-600">
+                      Gallery
+                    </li>{" "}
+                  </Link>
                 </ul>
               </div>
 
@@ -89,7 +98,7 @@ const Footer = () => {
                 <p className="text-orange-400 pb-2">
                   Join 25,000+ others and never miss donation and more..
                 </p>
-                <form className='mt-2 md:mt-0 box-border'>
+                <form className="mt-2 md:mt-0 box-border">
                   <label className="flex flex-col md:flex-row w-full box-border  rounded-lg bg-gray-800 focus:border-yellow-500">
                     <input
                       type="email"
@@ -112,16 +121,9 @@ const Footer = () => {
       </footer>
     </>
   );
-}
+};
 
-export default Footer
-
-
-
-
-
-
-
+export default Footer;
 
 // /** @format */
 
@@ -131,7 +133,6 @@ export default Footer
 // // import logo from "../../assets/workitimages/logo-abhidan.png";
 // // import logoIcon from "../logoAbhidan.png";
 // // import logo from "/Abhidan-master/frontend/src/assets/logo-abhidan.png";
-
 
 // import {
 // 	MDBDropdown,
@@ -146,7 +147,7 @@ export default Footer
 // 			/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 // 		if (regex_pattern.test(email_id)) {
-			
+
 // 			document.getElementsById("errmsg").style.visibility="hidden"
 // 		} else {
 // 			console.log('The email address is not valid');

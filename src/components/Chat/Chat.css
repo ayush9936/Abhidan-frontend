@@ -1,0 +1,42 @@
+.container-chat{
+  padding:2rem;
+  
+
+}
+.msg-area {
+  height: 70vh;
+  overflow: auto;
+  border:1px solid orange;
+}
+
+.message-body {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  width: fit-content;
+  color: white;
+  
+  max-width: 70%;
+  box-shadow: 3px 3px 4px 1px rgba(0, 0, 0, 0.377);
+  transition-duration: 300ms;
+}
+
+.message-body:hover {
+   transform: translateY(-5px); 
+}
+
+.message-body p {
+  margin: 0;
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.sent-msg {
+  background-color: darkgreen;
+  margin-left: auto;
+  border-radius: 25px 0 25px 25px;
+}
+
+.rec-msg {
+  background-color: rgba(9, 7, 10, 0.577);
+  border-radius: 0 20px 20px 20px;
+}
